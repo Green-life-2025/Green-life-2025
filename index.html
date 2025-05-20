@@ -2,59 +2,239 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Green Life</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Life</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      background: url('agrovoltaica.jpeg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 250px;
+      max-width: 100%;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #4CAF50;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: orange;
+    }
+
+    section {
+      padding: 40px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      color: orange;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #4CAF50;
+      color: #ccc;
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    form input, form textarea, form button {
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+
+    form button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background-color: #66bb6a;
+    }
+
+    .img-container {
+      text-align: center;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .img-container img {
+      width: 250px;
+      height: 180px;
+      object-fit: contain;
+      border-radius: 10px;
+      border: 4px solid orange;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      background-color: #fff;
+      transition: transform 0.3s ease;
+    }
+
+    .img-container img:hover {
+      transform: scale(1.15);
+    }
+
+    .document-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .document-link a {
+      display: block;
+      margin: 10px auto;
+      width: fit-content;
+      padding: 10px 20px;
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .document-link a:hover {
+      background-color: #ff9800;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="logo.jpeg" alt="Logo Green Life" class="logo" />
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#quienes-somos">Quiénes Somos</a>
-            <a href="#invernaderos">Invernaderos</a>
-            <a href="#documentacion">Documentación</a>
-        </nav>
-    </header>
 
+  <header>
+    <img src="logo.jpeg" alt="Green Life Logo" />
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#quienes-somos">Quienes Somos</a>
+      <a href="#invernaderos">Invernaderos</a>
+      <a href="#elementos-control">Elementos de Control</a>
+      <a href="#documentacion">Documentación</a>
+      <a href="#contacto">Contáctenos</a>
+    </nav>
+  </header>
+
+  <main>
     <section id="inicio">
-        <h1>Bienvenidos a Green Life</h1>
-        <p>
-        Explora un nuevo concepto de agricultura urbana sostenible. En Green Life desarrollamos sistemas innovadores que combinan automatización, energías renovables y cultivo de precisión para transformar la forma en que producimos alimentos en las ciudades. Nuestro proyecto actual se centra en la creación de un invernadero indoor automatizado y agrovoltaico, capaz de replicar las condiciones ideales para el crecimiento de ajíes y otras plantas, utilizando tecnología limpia y eficiente. Únete a nuestra misión de hacer de la agricultura urbana una alternativa real y sostenible para el futuro.
-        </p>
+      <h2 class="section-title">Bienvenidos a Green Life</h2>
+      <p>Explora un nuevo concepto de agricultura urbana sostenible. En Green Life desarrollamos sistemas innovadores que combinan automatización, energías renovables y cultivo de precisión para transformar la forma en que producimos alimentos en las ciudades...</p>
     </section>
 
     <section id="quienes-somos">
-        <h2>Quiénes Somos</h2>
-        <p>
-        En Green Life somos un equipo comprometido con la innovación tecnológica y la sostenibilidad ambiental. Nuestro objetivo es integrar la automatización y las energías renovables en la agricultura urbana, desarrollando soluciones inteligentes para producir alimentos de forma eficiente y respetuosa con el medio ambiente. Creemos en un futuro donde la tecnología y la naturaleza trabajen juntas para mejorar la calidad de vida en las ciudades, promoviendo la autosuficiencia alimentaria y el cuidado del planeta.
-        </p>
+      <h2 class="section-title">¿Quiénes Somos?</h2>
+      <p>En Green Life somos un equipo comprometido con la innovación tecnológica y la sostenibilidad ambiental...</p>
     </section>
 
     <section id="invernaderos">
-        <h2>Nuestros Invernaderos</h2>
-        <div class="gallery">
-            <img src="invernaderofrente.jpeg" alt="Invernadero Frente" />
-            <img src="pantalla.jpeg" alt="Pantalla" />
-            <img src="aji.jpeg" alt="Ají" />
-        </div>
+      <h2 class="section-title">Nuestros Invernaderos</h2>
+      <p>Nuestros invernaderos están diseñados específicamente para espacios pequeños y ambientes urbanos...</p>
+      <div class="img-container">
+        <img src="invernadero.png" alt="Invernadero Green Life" />
+        <img src="invernaderofrente.jpeg" alt="Invernadero Frente" />
+        <img src="pantalla.jpeg" alt="Pantalla de Control" />
+        <img src="aji.jpeg" alt="Cultivo de Ajíes" />
+      </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Elementos de Control -->
+    <section id="elementos-control">
+      <h2 class="section-title">Elementos de Control</h2>
+      <p>Son los dispositivos que se encargan de ejecutar acciones para modificar el entorno del invernadero Green Life, se encuentran conectados a la Raspberry Pi mediante módulos relé, estos actúan como interruptores controlados mediante el software.</p>
+      
+      <h3>Actuadores controlados por relés:</h3>
+      <ul>
+        <li><strong>2 bombas de agua:</strong> una para riego y otra para evacuación del agua residual.</li>
+        <li><strong>2 ventiladores:</strong> ubicados en el lateral izquierdo, para disminuir la temperatura y ventilación.</li>
+        <li><strong>Reflector LED:</strong> colocado en la parte superior para aumentar la temperatura y brindar luz al ají.</li>
+        <li><strong>Bombillo LED (rojas y azules):</strong> Para estimular el crecimiento del ají.</li>
+      </ul>
+
+      <h3>Elementos de comunicación:</h3>
+      <p>Estos dispositivos y tecnologías en el invernadero nos permiten obtener datos del entorno y monitorear remotamente el sistema.</p>
+
+      <ol>
+        <li><strong>Sensores:</strong>
+          <ul>
+            <li><strong>Sensor de temperatura DS18B20 (digital):</strong> Mide temperatura del ambiente dentro del invernadero.</li>
+            <li><strong>Sensor de humedad del suelo (analógico):</strong> Mide la humedad del suelo donde se ubica el ají.</li>
+            <li><strong>Sensores de nivel de agua (analógicos):</strong> En el tanque principal y la bandeja de agua residual.</li>
+          </ul>
+        </li>
+        <li><strong>Cámara (Picamera2):</strong> Librería de Python que permite capturar la imagen en vivo al interior del invernadero.</li>
+        <li><strong>Raspberry PI 4 Model B:</strong>
+          <ul>
+            <li>Es la unidad de control y procesamiento del invernadero.</li>
+            <li>La Raspberry ejecuta un servidor Flask que permite recoger los datos de los sensores, controlar los relés y mostrar la interfaz web.</li>
+          </ul>
+        </li>
+        <li><strong>Serveo (SSH túnel):</strong> Genera un enlace público para acceder a la interfaz web remotamente.</li>
+      </ol>
     </section>
 
     <section id="documentacion">
-        <h2>Documentación</h2>
-        <div>
-            <h3>Mejoramiento de Procesos</h3>
-            <a href="mejoramiento de procesos.pdf" target="_blank">📄 Ver documento</a>
-        </div>
-        <div>
-            <h3>Gestión de Mantenimiento</h3>
-            <a href="gestion de mantenimiento.pdf" target="_blank">📄 Ver documento</a>
-        </div>
+      <h2 class="section-title">Documentación</h2>
+      <p>Aquí podrás consultar los documentos relacionados con nuestros procesos y gestión técnica del proyecto Green Life. Puedes descargarlos directamente desde los siguientes enlaces:</p>
+      <div class="document-link">
+        <h3>Mejoramiento de Procesos</h3>
+        <a href="mejoramiento_de_procesos.pdf" target="_blank">Ver Documento</a>
+        <h3>Gestión de Mantenimiento</h3>
+        <a href="gestion_de_mantenimiento.pdf" target="_blank">Ver Documento</a>
+      </div>
     </section>
 
-    <footer>
-        <p>Green Life - Universidad de Buenaventura sede Bogotá</p>
-    </footer>
+    <section id="contacto">
+      <h2 class="section-title">Contáctenos</h2>
+      <form>
+        <input type="text" placeholder="Nombre" required />
+        <input type="email" placeholder="Correo" required />
+        <textarea placeholder="Observación" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    Green Life - Universidad de Buenaventura Sede Bogotá
+  </footer>
 </body>
 </html>
+
