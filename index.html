@@ -19,7 +19,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
     }
 
     header img {
@@ -28,7 +27,7 @@
     }
 
     nav a {
-      margin: 0 10px;
+      margin: 0 15px;
       text-decoration: none;
       color: #4CAF50;
       font-weight: bold;
@@ -42,7 +41,7 @@
 
     section {
       padding: 40px 20px;
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 248, 240, 0.9);
       margin: 20px;
       border-radius: 10px;
     }
@@ -67,35 +66,12 @@
       font-size: 12px;
     }
 
-    .img-container {
-      text-align: center;
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .img-container img {
-      width: 250px;
-      height: 180px;
-      object-fit: contain;
-      border-radius: 10px;
-      border: 4px solid orange;
-      background-color: #fff;
-      transition: transform 0.3s ease;
-    }
-
-    .img-container img:hover {
-      transform: scale(1.15);
-    }
-
-    .document-link, .external-link {
+    .document-link {
       text-align: center;
       margin-top: 20px;
     }
 
-    .document-link a, .external-link a {
+    .document-link a {
       display: block;
       margin: 10px auto;
       width: fit-content;
@@ -108,20 +84,14 @@
       transition: background 0.3s;
     }
 
-    .document-link a:hover, .external-link a:hover {
+    .document-link a:hover {
       background-color: #ff9800;
     }
 
-    ul {
-      padding-left: 20px;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    strong {
-      font-weight: bold;
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
   </style>
 </head>
@@ -132,10 +102,14 @@
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#quienes-somos">Quienes Somos</a>
+      <a href="#objetivo">Objetivo</a>
+      <a href="#resultados">Resultados</a>
       <a href="#invernaderos">Invernaderos</a>
-      <a href="#elementos-control">Elementos de Control</a>
+      <a href="#elementos">Elementos de Control</a>
       <a href="#documentacion">Documentación</a>
-      <a href="https://planner.cloud.microsoft/webui/plan/tCuhk63waECaeWWU-sBpRGQAGtjW/view/board?tid=939f8488-9d34-470c-a6c0-8cf59b941bb6" target="_blank">Planner</a>
+      <a href="#monitoreo">Monitoreo</a>
+      <a href="#referencias">Referencias</a>
+      <a href="#conclusiones">Conclusiones</a>
     </nav>
   </header>
 
@@ -150,12 +124,26 @@
       <p>En Green Life somos un equipo comprometido con la innovación tecnológica y la sostenibilidad ambiental. Nuestro objetivo es integrar la automatización y las energías renovables en la agricultura urbana, desarrollando soluciones inteligentes para producir alimentos de forma eficiente y respetuosa con el medio ambiente. Creemos en un futuro donde la tecnología y la naturaleza trabajen juntas para mejorar la calidad de vida en las ciudades, promoviendo la autosuficiencia alimentaria y el cuidado del planeta.</p>
     </section>
 
+    <section id="objetivo">
+      <h2 class="section-title">Objetivo</h2>
+      <p>Implementar un invernadero automatizado indoor, integrando tecnologías de control y eficiencia energética para el cultivo de ají en zonas urbanas.</p>
+    </section>
+
+    <section id="resultados">
+      <h2 class="section-title">Resultados</h2>
+      <div class="two-columns">
+        <p>Se logró implementar un sistema de control ambiental completamente funcional, capaz de mantener estables las variables críticas como temperatura, humedad del suelo y nivel de agua mediante sensores, actuadores y programación adaptativa.</p>
+        <p>La Raspberry Pi 4 centraliza el control, almacenamiento y comunicación del sistema, permitiendo un monitoreo remoto en tiempo real a través de una interfaz web intuitiva.</p>
+        <p>Se implementó un sistema de iluminación con control horario que simula los ciclos de día y noche, optimizando el fotoperiodo de la planta.</p>
+        <p>El sistema energético fotovoltaico, conforme a la Resolución 1715 de 2014, garantiza el abastecimiento eléctrico del invernadero, alineado con criterios de sostenibilidad y eficiencia.</p>
+        <p>La recolección de datos históricos permitió implementar mantenimiento predictivo, mejorando la disponibilidad y reduciendo el tiempo de inactividad.</p>
+        <p>Se aplicaron herramientas de mejora continua como las 5S, el sistema Kanban y el enfoque Kaizen, facilitando la organización del mantenimiento y fomentando una cultura de calidad.</p>
+      </div>
+    </section>
+
     <section id="invernaderos">
       <h2 class="section-title">Nuestros Invernaderos</h2>
-      <p>Nuestros invernaderos están diseñados específicamente para espacios pequeños y ambientes urbanos, ofreciendo una solución compacta y eficiente para el cultivo indoor. Cada unidad integra todo lo necesario para garantizar el crecimiento óptimo de las plantas: sistemas automatizados de control de temperatura, humedad y luz, gestionados por sensores de alta precisión.</p>
-      <p>Construidos con materiales resistentes a la humedad y autoaislantes térmicos, aseguran un ambiente estable y duradero incluso en condiciones adversas. Además, incorporan un sistema de alimentación basado en energía fotovoltaica, lo que permite un funcionamiento autónomo y sostenible, reduciendo la huella de carbono.</p>
-      <p>Con Green Life, cada invernadero es una fusión entre tecnología avanzada y respeto por el medio ambiente, pensado para maximizar la productividad agrícola en espacios reducidos y contribuir a un futuro más verde.</p>
-      
+      <p>Nuestros invernaderos están diseñados específicamente para espacios pequeños y ambientes urbanos...</p>
       <div class="img-container">
         <img src="invernadero.png" alt="Invernadero Green Life" />
         <img src="invernaderofrente.jpeg" alt="Invernadero Frente" />
@@ -164,65 +152,77 @@
       </div>
     </section>
 
-    <section id="elementos-control">
+    <section id="elementos">
       <h2 class="section-title">Elementos de Control</h2>
-      <p>Son los dispositivos que se encargan de ejecutar acciones para modificar el entorno del invernadero Green Life, se encuentran conectados a la Raspberry Pi mediante módulos relé, estos actúan como interruptores controlados mediante el software.</p>
-
+      <p>Son los dispositivos que se encargan de ejecutar acciones para modificar el entorno del invernadero Green Life...</p>
       <h3>Actuadores controlados por relés:</h3>
-      <ul>
-        <li><strong>2 bombas de agua:</strong> una para riego y otra para evacuación del agua residual.</li>
-        <li><strong>2 ventiladores:</strong> ubicados en el lateral izquierdo, para disminuir la temperatura y ventilación.</li>
-        <li><strong>Reflector Led:</strong> colocado en la parte superior para aumentar la temperatura y brindar luz a al ají.</li>
-        <li><strong>Bombillo LED (rojas y azules):</strong> Para estimular el crecimiento del ají.</li>
-      </ul>
-
+      <div class="two-columns">
+        <ul>
+          <li><strong>2 bombas de agua:</strong> una para riego y otra para evacuación del agua residual.</li>
+          <li><strong>2 ventiladores:</strong> ubicados en el lateral izquierdo...</li>
+          <li><strong>Reflector Led:</strong> colocado en la parte superior...</li>
+          <li><strong>Bombillo LED (rojas y azules):</strong> Para estimular el crecimiento del ají.</li>
+        </ul>
+      </div>
       <h3>Elementos de comunicación:</h3>
-      <p>Estos dispositivos y tecnologías en el invernadero nos permiten obtener datos del entorno y monitorear remotamente el sistema.</p>
-      <ul>
-        <li><strong>1. Sensores:</strong>
-          <ul>
-            <li><strong>Sensor de temperatura DS18B20 (digital):</strong> Mide temperatura del ambiente dentro del invernadero.</li>
-            <li><strong>Sensor de humedad del suelo (analógico):</strong> Mide la humedad del suelo donde se ubica el ají.</li>
-            <li><strong>Sensores de nivel de agua (analógicos):</strong> En el tanque principal y la bandeja de agua residual.</li>
-          </ul>
-        </li>
-        <li><strong>2. Cámara (Picamera2):</strong> Librería de Python que permite capturar la imagen en vivo al interior del invernadero.</li>
-        <li><strong>3. Raspberry PI 4 Model B:</strong>
-          <ul>
-            <li>Es la unidad de control y procesamiento del invernadero.</li>
-            <li>La Raspberry ejecuta un servidor flask que permite recoger los datos de los sensores, controlar los relés y muestra la interfaz web.</li>
-          </ul>
-        </li>
-        <li><strong>4. Serveo (SSH túnel):</strong> Genera un enlace público para acceder a la interfaz web remotamente.</li>
-      </ul>
+      <div class="two-columns">
+        <ol>
+          <li><strong>Sensores:</strong>
+            <ul>
+              <li><strong>Sensor de temperatura DS18B20 (digital):</strong> Mide temperatura...</li>
+              <li><strong>Sensor de humedad del suelo (analógico):</strong> Mide la humedad...</li>
+              <li><strong>Sensores de nivel de agua (analógicos):</strong> En el tanque y bandeja...</li>
+            </ul>
+          </li>
+          <li><strong>Cámara (Picamera2):</strong> Librería de Python para captura en vivo.</li>
+          <li><strong>Raspberry PI 4 Model B:</strong> Unidad de control...</li>
+          <li><strong>Serveo (SSH túnel):</strong> Genera un enlace público para monitoreo remoto.</li>
+        </ol>
+      </div>
     </section>
 
     <section id="documentacion">
       <h2 class="section-title">Documentación</h2>
-      <p>Aquí podrás consultar los documentos relacionados con nuestros procesos y gestión técnica del proyecto Green Life.</p>
+      <p style="text-align: justify;">Aquí podrás consultar los documentos relacionados con nuestros procesos...</p>
       <div class="document-link">
         <h3>Mejoramiento de Procesos</h3>
-        <a href="MEJORAMIENTO DE PROCESOS.pdf" target="_blank">Ver Documento</a>
+        <a href="https://green-life-2025.github.io/Green-life-2025/mejoramiento-de-procesos.pdf" target="_blank">Ver Documento</a>
         <h3>Gestión de Mantenimiento</h3>
-        <a href="GESTION DE MANTENIMIENTO.pdf" target="_blank">Ver Documento</a>
+        <a href="https://green-life-2025.github.io/Green-life-2025/gestion-de-mantenimiento.pdf" target="_blank">Ver Documento</a>
       </div>
-   </section>
+    </section>
 
     <section id="monitoreo">
       <h2 class="section-title">Monitoreo</h2>
       <p>Desde el siguiente enlace se podrá acceder al monitoreo del sistema en tiempo real:</p>
-      <div class="https://green-life-2025.github.io/Green-life-2025/">
-       <a href="https://green-life-2025.github.io/Green-life-2025/mejoramiento-de-procesos.pdf" target="_blank">Ver Documento</a>
-      </div>
+      <p><em>[Aquí irá el enlace al monitoreo]</em></p>
+    </section>
+
+    <section id="referencias">
+      <h2 class="section-title">Referencias</h2>
+      <ul>
+        <li>IEEE Std 1451 – Standard for a Smart Transducer Interface...</li>
+        <li>IEEE Std 1636.1-2011 – Standard for Software Interface...</li>
+        <li>IEEE Std 1232 – Standard for Artificial Intelligence Exchange...</li>
+        <li>Resolución 1715 de 2014 – Ministerio de Minas y Energía...</li>
+        <li>ICONTEC (2021). Manual de mantenimiento...</li>
+        <li>Victron Energy. Manuales técnicos...</li>
+        <li>Hoja técnica del sensor YL-100.</li>
+        <li>Hoja técnica del sensor DS18B20.</li>
+        <li>Raspberry Pi Foundation. (2023)...</li>
+        <li>Metodología Kaizen y herramientas Lean Manufacturing...</li>
+      </ul>
+    </section>
+
+    <section id="conclusiones">
+      <h2 class="section-title">Conclusiones</h2>
+      <p>El modelo propuesto no solo es replicable, sino también escalable...</p>
+      <p>El uso de estándares internacionales como las normas IEEE y la Resolución 1715...</p>
     </section>
   </main>
 
   <footer>
-    Green Life - Universidad de San Buenaventura Sede Bogotá
+    Green Life - Universidad de Buenaventura Sede Bogotá
   </footer>
-
 </body>
 </html>
-
-
-
