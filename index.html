@@ -9,7 +9,7 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       color: #333;
-      background: url('agrovoltaica.jpeg') no-repeat center center fixed;
+      background: url('Agrovoltaica.jpeg') no-repeat center center fixed;
       background-size: cover;
     }
 
@@ -40,10 +40,12 @@
     }
 
     section {
-      padding: 40px 20px;
-      background-color: rgba(255, 248, 240, 0.9);
-      margin: 20px;
+      padding: 30px;
+      background-color: rgba(255, 248, 240, 0.95);
+      margin: 20px auto;
       border-radius: 10px;
+      max-width: 1200px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .section-title {
@@ -91,37 +93,49 @@
     .two-columns {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 10px;
+    }
+
+    .img-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .img-container img {
+      width: 250px;
+      height: auto;
+      border: 4px solid orange;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .img-container img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.jpeg" alt="Green Life Logo" />
+    <img src="logo.png" alt="Logo Green Life">
     <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#quienes-somos">Quienes Somos</a>
+      <a href="#bienvenida">Bienvenida</a>
+      <a href="#quienes">¿Quiénes Somos?</a>
       <a href="#objetivo">Objetivo</a>
       <a href="#resultados">Resultados</a>
-      <a href="#invernaderos">Invernaderos</a>
       <a href="#elementos">Elementos de Control</a>
-      <a href="#documentacion">Documentación</a>
+      <a href="#documentos">Documentación</a>
       <a href="#monitoreo">Monitoreo</a>
       <a href="#referencias">Referencias</a>
-      <a href="#conclusiones">Conclusiones</a>
     </nav>
   </header>
 
   <main>
-    <section id="inicio">
-      <h2 class="section-title">Bienvenidos a Green Life</h2>
-      <p>Explora un nuevo concepto de agricultura urbana sostenible. En Green Life desarrollamos sistemas innovadores que combinan automatización, energías renovables y cultivo de precisión para transformar la forma en que producimos alimentos en las ciudades. Nuestro proyecto actual se centra en la creación de un invernadero indoor automatizado y agrovoltaico, capaz de replicar las condiciones ideales para el crecimiento de ajíes y otras plantas, utilizando tecnología limpia y eficiente. Únete a nuestra misión de hacer de la agricultura urbana una alternativa real y sostenible para el futuro.</p>
-    </section>
-
-    <section id="quienes-somos">
+    <section id="quienes">
       <h2 class="section-title">¿Quiénes Somos?</h2>
-      <p>En Green Life somos un equipo comprometido con la innovación tecnológica y la sostenibilidad ambiental. Nuestro objetivo es integrar la automatización y las energías renovables en la agricultura urbana, desarrollando soluciones inteligentes para producir alimentos de forma eficiente y respetuosa con el medio ambiente. Creemos en un futuro donde la tecnología y la naturaleza trabajen juntas para mejorar la calidad de vida en las ciudades, promoviendo la autosuficiencia alimentaria y el cuidado del planeta.</p>
+      <p>Somos un equipo comprometido con la innovación tecnológica aplicada a la agricultura urbana sostenible. Nuestra misión es integrar soluciones automatizadas y eficientes para mejorar el cultivo en espacios reducidos, promoviendo el uso de energías renovables y tecnologías inteligentes.</p>
     </section>
 
     <section id="objetivo">
@@ -132,97 +146,88 @@
     <section id="resultados">
       <h2 class="section-title">Resultados</h2>
       <div class="two-columns">
-        <p>Se logró implementar un sistema de control ambiental completamente funcional, capaz de mantener estables las variables críticas como temperatura, humedad del suelo y nivel de agua mediante sensores, actuadores y programación adaptativa.</p>
-        <p>La Raspberry Pi 4 centraliza el control, almacenamiento y comunicación del sistema, permitiendo un monitoreo remoto en tiempo real a través de una interfaz web intuitiva.</p>
-        <p>Se implementó un sistema de iluminación con control horario que simula los ciclos de día y noche, optimizando el fotoperiodo de la planta.</p>
-        <p>El sistema energético fotovoltaico, conforme a la Resolución 1715 de 2014, garantiza el abastecimiento eléctrico del invernadero, alineado con criterios de sostenibilidad y eficiencia.</p>
-        <p>La recolección de datos históricos permitió implementar mantenimiento predictivo, mejorando la disponibilidad y reduciendo el tiempo de inactividad.</p>
-        <p>Se aplicaron herramientas de mejora continua como las 5S, el sistema Kanban y el enfoque Kaizen, facilitando la organización del mantenimiento y fomentando una cultura de calidad.</p>
-      </div>
-    </section>
-
-    <section id="invernaderos">
-      <h2 class="section-title">Nuestros Invernaderos</h2>
-      <p>Nuestros invernaderos están diseñados específicamente para espacios pequeños y ambientes urbanos...</p>
-      <div class="img-container">
-        <img src="invernadero.png" alt="Invernadero Green Life" />
-        <img src="invernaderofrente.jpeg" alt="Invernadero Frente" />
-        <img src="pantalla.jpeg" alt="Pantalla de Control" />
-        <img src="aji.jpeg" alt="Cultivo de Ajíes" />
+        <ul>
+          <li>Se logró implementar un sistema de control ambiental completamente funcional, capaz de mantener estables las variables críticas como temperatura, humedad del suelo y nivel de agua mediante sensores, actuadores y programación adaptativa.</li>
+          <li>La Raspberry Pi 4 centraliza el control, almacenamiento y comunicación del sistema, permitiendo un monitoreo remoto en tiempo real a través de una interfaz web intuitiva.</li>
+          <li>Se implementó un sistema de iluminación con control horario que simula los ciclos de día y noche, optimizando el fotoperiodo de la planta.</li>
+          <li>El sistema energético fotovoltaico, conforme a la Resolución 1715 de 2014, garantiza el abastecimiento eléctrico del invernadero, alineado con criterios de sostenibilidad y eficiencia.</li>
+          <li>La recolección de datos históricos permitió implementar mantenimiento predictivo, mejorando la disponibilidad y reduciendo el tiempo de inactividad.</li>
+          <li>Se aplicaron herramientas de mejora continua como las 5S, el sistema Kanban y el enfoque Kaizen, facilitando la organización del mantenimiento y fomentando una cultura de calidad.</li>
+        </ul>
       </div>
     </section>
 
     <section id="elementos">
       <h2 class="section-title">Elementos de Control</h2>
-      <p>Son los dispositivos que se encargan de ejecutar acciones para modificar el entorno del invernadero Green Life...</p>
-      <h3>Actuadores controlados por relés:</h3>
       <div class="two-columns">
-        <ul>
-          <li><strong>2 bombas de agua:</strong> una para riego y otra para evacuación del agua residual.</li>
-          <li><strong>2 ventiladores:</strong> ubicados en el lateral izquierdo...</li>
-          <li><strong>Reflector Led:</strong> colocado en la parte superior...</li>
-          <li><strong>Bombillo LED (rojas y azules):</strong> Para estimular el crecimiento del ají.</li>
-        </ul>
-      </div>
-      <h3>Elementos de comunicación:</h3>
-      <div class="two-columns">
-        <ol>
-          <li><strong>Sensores:</strong>
-            <ul>
-              <li><strong>Sensor de temperatura DS18B20 (digital):</strong> Mide temperatura...</li>
-              <li><strong>Sensor de humedad del suelo (analógico):</strong> Mide la humedad...</li>
-              <li><strong>Sensores de nivel de agua (analógicos):</strong> En el tanque y bandeja...</li>
-            </ul>
-          </li>
-          <li><strong>Cámara (Picamera2):</strong> Librería de Python para captura en vivo.</li>
-          <li><strong>Raspberry PI 4 Model B:</strong> Unidad de control...</li>
-          <li><strong>Serveo (SSH túnel):</strong> Genera un enlace público para monitoreo remoto.</li>
-        </ol>
+        <div>
+          <h3>Actuadores controlados por relés:</h3>
+          <ul>
+            <li><strong>2 bombas de agua:</strong> una para riego y otra para evacuación del agua residual.</li>
+            <li><strong>2 ventiladores:</strong> ubicados en el lateral izquierdo, para disminuir la temperatura y ventilación.</li>
+            <li><strong>Reflector LED:</strong> colocado en la parte superior para aumentar la temperatura y brindar luz al ají.</li>
+            <li><strong>Bombillo LED (rojas y azules):</strong> para estimular el crecimiento del ají.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Elementos de comunicación:</h3>
+          <ul>
+            <li><strong>Sensores:</strong>
+              <ul>
+                <li><strong>Sensor de temperatura DS18B20 (digital):</strong> Mide temperatura del ambiente dentro del invernadero.</li>
+                <li><strong>Sensor de humedad del suelo (analógico):</strong> Mide la humedad del suelo donde se ubica el ají.</li>
+                <li><strong>Sensores de nivel de agua (analógicos):</strong> En el tanque principal y la bandeja de agua residual.</li>
+              </ul>
+            </li>
+            <li><strong>Cámara (Picamera2):</strong> Librería de Python que permite capturar la imagen en vivo al interior del invernadero.</li>
+            <li><strong>Raspberry PI 4 Model B:</strong> Es la unidad de control y procesamiento del invernadero. Ejecuta un servidor Flask que permite recoger los datos de los sensores, controlar los relés y mostrar la interfaz web.</li>
+            <li><strong>Serveo (SSH túnel):</strong> Genera un enlace público para acceder a la interfaz web remotamente.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section id="documentacion">
+    <section id="documentos">
       <h2 class="section-title">Documentación</h2>
-      <p style="text-align: justify;">Aquí podrás consultar los documentos relacionados con nuestros procesos...</p>
       <div class="document-link">
-        <h3>Mejoramiento de Procesos</h3>
-        <a href="https://green-life-2025.github.io/Green-life-2025/mejoramiento-de-procesos.pdf" target="_blank">Ver Documento</a>
-        <h3>Gestión de Mantenimiento</h3>
-        <a href="https://green-life-2025.github.io/Green-life-2025/gestion-de-mantenimiento.pdf" target="_blank">Ver Documento</a>
+        <a href="https://green-life-2025.github.io/Green-life-2025/">Ver documentación completa</a>
       </div>
     </section>
 
     <section id="monitoreo">
       <h2 class="section-title">Monitoreo</h2>
       <p>Desde el siguiente enlace se podrá acceder al monitoreo del sistema en tiempo real:</p>
-      <p><em>[Aquí irá el enlace al monitoreo]</em></p>
+      <div class="document-link">
+        <a href="#">[Enlace de monitoreo]</a>
+      </div>
+    </section>
+
+    <section id="conclusiones">
+      <h2 class="section-title">Conclusiones</h2>
+      <p>El modelo propuesto no solo es replicable, sino también escalable, representando una solución viable para el cultivo en espacios reducidos, con autonomía energética y gestión remota de variables críticas para el crecimiento vegetal.</p>
+      <p>El uso de estándares internacionales como las normas IEEE y la Resolución 1715 de 2014 permite al sistema cumplir con parámetros de calidad, seguridad y eficiencia energética.</p>
     </section>
 
     <section id="referencias">
       <h2 class="section-title">Referencias</h2>
       <ul>
-        <li>IEEE Std 1451 – Standard for a Smart Transducer Interface...</li>
-        <li>IEEE Std 1636.1-2011 – Standard for Software Interface...</li>
-        <li>IEEE Std 1232 – Standard for Artificial Intelligence Exchange...</li>
-        <li>Resolución 1715 de 2014 – Ministerio de Minas y Energía...</li>
-        <li>ICONTEC (2021). Manual de mantenimiento...</li>
-        <li>Victron Energy. Manuales técnicos...</li>
+        <li>IEEE Std 1451 – Standard for a Smart Transducer Interface for Sensors and Actuators.</li>
+        <li>IEEE Std 1636.1-2011 – Standard for Software Interface for Maintenance Information Collection and Analysis.</li>
+        <li>IEEE Std 1232 – Standard for Artificial Intelligence Exchange and Service Tie to All Test Environments (AI-ESTATE).</li>
+        <li>Resolución 1715 de 2014 – Ministerio de Minas y Energía de Colombia.</li>
+        <li>ICONTEC (2021). Manual de mantenimiento para sistemas eléctricos de energías renovables.</li>
+        <li>Victron Energy. Manuales técnicos de controladores e inversores.</li>
         <li>Hoja técnica del sensor YL-100.</li>
         <li>Hoja técnica del sensor DS18B20.</li>
-        <li>Raspberry Pi Foundation. (2023)...</li>
-        <li>Metodología Kaizen y herramientas Lean Manufacturing...</li>
+        <li>Raspberry Pi Foundation. (2023). Documentación técnica oficial.</li>
+        <li>Metodología Kaizen y herramientas Lean Manufacturing aplicadas al mantenimiento industrial.</li>
       </ul>
-    </section>
-
-    <section id="conclusiones">
-      <h2 class="section-title">Conclusiones</h2>
-      <p>El modelo propuesto no solo es replicable, sino también escalable...</p>
-      <p>El uso de estándares internacionales como las normas IEEE y la Resolución 1715...</p>
     </section>
   </main>
 
   <footer>
     Green Life - Universidad de Buenaventura Sede Bogotá
   </footer>
+
 </body>
 </html>
